@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <style type='text/css'>
+	.preview img{
+		width:120px;
+		display:inline-block;
+		float:left;
+		margin-right:10px;
+		margin-bottom:10px;
+	}
+  </style>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<p class="preview">
+	<img  alt="" />
+</p>
+<br>
+<br>
+<div>
+	<input id="fileupload" type="file" name="files[]" data-url="/upload">
+</div>
+
+<script>
+$(function () {
+    $('#fileupload').fileupload({
+        dataType: 'json',
+        done: function (e, data) {
+            $.each(data.result.files, function (index, file) {
+            	$('.preview img').attr('src',file)
+            	$('.preview img').Jcrop();
+            	// img = '<img src=' + file + ' width="120px" />';
+            	// $(img).appendTo($('.preview'));
+            });
+        }
+    });
+});
+</script>
